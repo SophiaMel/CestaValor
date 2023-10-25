@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     /* Custom CSS for your elements */
@@ -64,23 +65,23 @@ background: #fff;
             <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="/">Categorias</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <span class="dropdown-header">Alimentos</span>
-                <li><a class="dropdown-item"href="/Carnes" >Carnes </a></li>
-                <li><a class="dropdown-item"href="/Aves" >Aves </a></li>
-                <li><a class="dropdown-item"href="/FruVer" >Frutas e verduras</a></li>
-                <li><a class="dropdown-item"href="/Laticinios" >Queijos e laticínios</a></li>
-                <li><a class="dropdown-item"href="#" >Peixes e frutos do mar</a></li>
-                <li><a class="dropdown-item"href="/Paes" >Pães</a></li>
+                <li><a class="dropdown-item" id="category-list" href="/Carnes" >Carnes </a></li>
+                <li><a class="dropdown-item" id="category-list"href="/Aves" >Aves </a></li>
+                <li><a class="dropdown-item" id="category-list"href="/FruVer" >Frutas e verduras</a></li>
+                <li><a class="dropdown-item" id="category-list"href="/Laticinios" >Queijos e laticínios</a></li>
+                <li><a class="dropdown-item" id="category-list"href="#" >Peixes e frutos do mar</a></li>
+                <li><a class="dropdown-item" id="category-list"href="/Paes" >Pães</a></li>
                 <span class="dropdown-header">Bebidas</span>
-                <li><a class="dropdown-item"href="/Sucos" >Sucos,chá e água</a></li>
-                <li><a class="dropdown-item"href="/Leite" >Leite</a></li>
-                <li><a class="dropdown-item"href="/Refri" >Refrigerantes e energéticos</a></li>
-                <li><a class="dropdown-item"href="/Cervejas" >Cervejas</a></li>
-                <li><a class="dropdown-item"href="/Vinho" >Vinhos e espumantes</a></li>
+                <li><a class="dropdown-item" id="category-list"href="/Sucos" >Sucos,chá e água</a></li>
+                <li><a class="dropdown-item" id="category-list"href="/Leite" >Leite</a></li>
+                <li><a class="dropdown-item" id="category-list"href="/Refri" >Refrigerantes e energéticos</a></li>
+                <li><a class="dropdown-item" id="category-list"href="/Cervejas" >Cervejas</a></li>
+                <li><a class="dropdown-item" id="category-list"href="/Vinho" >Vinhos e espumantes</a></li>
                 <span class="dropdown-header">Limpeza</span>
-                <li><a class="dropdown-item"href="/Detergente" >Detergente</a></li>
-                <li><a class="dropdown-item"href="/Sabao">Sabão</a></li>
-                <li><a class="dropdown-item"href="/Alcool" >Alcool</a></li>
-                <li><a class="dropdown-item"href="/Amaciante">Amaciante</a></li> 
+                <li><a class="dropdown-item" id="category-list" href="/Detergente" >Detergente</a></li>
+                <li><a class="dropdown-item" id="category-list"href="/Sabao">Sabão</a></li>
+                <li><a class="dropdown-item" id="category-list"href="/Alcool" >Alcool</a></li>
+                <li><a class="dropdown-item" id="category-list"href="/Amaciante">Amaciante</a></li> 
               </ul>
             </li>
             <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="/promo">Promoções </a>
@@ -104,7 +105,7 @@ background: #fff;
               </ul>
         </li>
           </ul>
-          <form class="d-flex">
+          <form class="d-flex" action="/search" method="get">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Procure um produto" name="search">
               <div class="input-group-btn">
@@ -115,7 +116,7 @@ background: #fff;
         </div>
       </div>
       </nav>
-        
-
+       
+    
 </header>
 

@@ -82,4 +82,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+// ... Your existing code ...
+
+// Create a route for price comparison
+
 module.exports = app;
