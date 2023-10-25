@@ -5,47 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CestaValor</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     /* Custom CSS for your elements */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-.container{
-  padding: 70px 0;
-}
-header,.navbar{
-  background-color: #11C66F;
-}
-#nav-container{
-  padding-top: 0;
-  padding-top: 0;
+body {
+  background-color: #F6F6F6;
 
-}
-#logo{
-  width: 50px;
-  height: 40px;
-
-}
-.navbar-brand {
-  color: #fff;
-  font-size: 30px;
-  font-weight: 600;
-  text-decoration: none; /* Change to your desired text color */
-}
-#navbarDropdown{ 
-   color: #fff;
-}
-#navbarDropdown:hover{
-  background: #83d377;
-}
-
+}  
 .dropdown-menu{
   background-color: #11c66f;
 }
@@ -96,40 +64,43 @@ background: #fff;
             <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="/">Categorias</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <span class="dropdown-header">Alimentos</span>
-                <li><a class="dropdown-item"href="#">Carnes e aves</a></li>
-                <li><a class="dropdown-item"href="#"> Frios</a></li>
-                <li><a class="dropdown-item"href="#">Frutas e verduras</a></li>
-                <li><a class="dropdown-item"href="#">Queijos e laticínios</a></li>
+                <li><a class="dropdown-item"href="/Carnes" >Carnes </a></li>
+                <li><a class="dropdown-item"href="/Aves" >Aves </a></li>
+                <li><a class="dropdown-item"href="/FruVer" >Frutas e verduras</a></li>
+                <li><a class="dropdown-item"href="/Laticinios" >Queijos e laticínios</a></li>
+                <li><a class="dropdown-item"href="#" >Peixes e frutos do mar</a></li>
+                <li><a class="dropdown-item"href="/Paes" >Pães</a></li>
                 <span class="dropdown-header">Bebidas</span>
-                <li><a class="dropdown-item"href="#">Sucos,chá e água</a></li>
-                <li><a class="dropdown-item"href="#">Refrigerantes e energéticos</a></li>
-                <li><a class="dropdown-item"href="#">Cervejas</a></li>
-                <li><a class="dropdown-item"href="#">Vinhos e espumantes</a></li>
+                <li><a class="dropdown-item"href="/Sucos" >Sucos,chá e água</a></li>
+                <li><a class="dropdown-item"href="/Leite" >Leite</a></li>
+                <li><a class="dropdown-item"href="/Refri" >Refrigerantes e energéticos</a></li>
+                <li><a class="dropdown-item"href="/Cervejas" >Cervejas</a></li>
+                <li><a class="dropdown-item"href="/Vinho" >Vinhos e espumantes</a></li>
                 <span class="dropdown-header">Limpeza</span>
-                <li><a class="dropdown-item"href="#">Detergente</a></li>
-                <li><a class="dropdown-item"href="#">Sabão</a></li>
-                <li><a class="dropdown-item"href="#">Alcool</a></li>
-                <li><a class="dropdown-item"href="#">Amaciante</a></li>
+                <li><a class="dropdown-item"href="/Detergente" >Detergente</a></li>
+                <li><a class="dropdown-item"href="/Sabao">Sabão</a></li>
+                <li><a class="dropdown-item"href="/Alcool" >Alcool</a></li>
+                <li><a class="dropdown-item"href="/Amaciante">Amaciante</a></li> 
               </ul>
             </li>
             <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="/promo">Promoções </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown" >
-                <li><a class="dropdown-item" href="#">Até 15% off</a></li>
-                <li><a class="dropdown-item" href="#">Até 30% off</a></li>
+                <li><a class="dropdown-item" href="#" >Até 15% off</a></li>
+                <li><a class="dropdown-item" href="#" >Até 30% off</a></li>
                 <li><a class="dropdown-item" href="#">Até 50% off</a></li>
-                <li><a class="dropdown-item" href="#">Até 60% off</a></li>
-                <li><a class="dropdown-item" href="#">Até 80% off</a></li>
-                <li><a class="dropdown-item" href="#">Leve mais pague menos</a></li>
+                <li><a class="dropdown-item" href="#" >Até 60% off</a></li>
+                <li><a class="dropdown-item" href="#" >Até 80% off</a></li>
+                <li><a class="dropdown-item" href="#" >Leve mais pague menos</a></li>
               </ul>
         </li>
             <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="/super">Supermercados </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">São Luiz</a></li>
-                <li><a class="dropdown-item" href="#">Pinheiro</a></li>
-                <li><a class="dropdown-item" href="#">Cometa</a></li>
-                <li><a class="dropdown-item" href="#">Carrefour</a></li>
-                <li><a class="dropdown-item" href="#">Assai</a></li>
-                <li><a class="dropdown-item" href="#">Lagoa</a></li>
+                <li><a class="dropdown-item" href="/SaoLuiz" >São Luiz</a></li>
+                <li><a class="dropdown-item" href="/Pinheiro" >Pinheiro</a></li>
+                <li><a class="dropdown-item" href="/Cometa" >Cometa</a></li>
+                <li><a class="dropdown-item" href="/Carrefour" >Carrefour</a></li>
+                <li><a class="dropdown-item" href="/Assai" >Assai</a></li>
+                <li><a class="dropdown-item" href="/Lagoa">Lagoa</a></li>
               </ul>
         </li>
           </ul>
