@@ -3,6 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const puppeteer = require('puppeteer');
+const $ = require('cheerio');
+const CronJob = require('cron').CronJob;
+const nodemailer = require('nodemailer');
+
 
 var indexRouter = require('./routes/index');
 var promoRouter = require('./routes/promo');
@@ -27,6 +32,7 @@ var AssaiRouter = require('./routes/Assai');
 var LagoaRouter = require('./routes/Lagoa');
 var AvesRouter= require('./routes/Aves');
 var LeiteRouter = require('./routes/Leite');
+var searchRouter = require('./routes/search')
 var app = express();
 app.use(express.static('public'))
 app.use('/static', express.static('public'))
@@ -65,7 +71,7 @@ app.use('/Assai', AssaiRouter);
 app.use('/Lagoa', LagoaRouter);
 app.use('/Aves',AvesRouter);
 app.use('/Leite',LeiteRouter);
-
+app.use('./search',searchRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

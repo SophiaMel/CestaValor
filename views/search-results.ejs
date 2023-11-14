@@ -1,0 +1,15 @@
+<%- include('./partials/header') %>
+  <main>
+    <div class="container">
+        <h2>Search Results for "<%= query %>"</h2>
+        <ul>
+          <% products.forEach(product => { %>
+            <li><%= product.productName %> - Price: <%= product.price %></li>
+          <% }); %>
+        </ul>
+      </div>
+  </main>
+
+
+  </body>
+</html>
