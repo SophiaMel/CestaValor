@@ -1,12 +1,13 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var favicon = require('serve-favicon');
 var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 var logger = require('morgan');
-const puppeteer = require('puppeteer');
-const $ = require('cheerio');
-const CronJob = require('cron').CronJob;
-const nodemailer = require('nodemailer');
+var mongoose = require('mongoose');
+var expressHbs = require('express-handlebars');
+
 
 
 var indexRouter = require('./routes/index');
@@ -32,8 +33,11 @@ var AssaiRouter = require('./routes/Assai');
 var LagoaRouter = require('./routes/Lagoa');
 var AvesRouter= require('./routes/Aves');
 var LeiteRouter = require('./routes/Leite');
-var searchRouter = require('./routes/search')
+var PeixeRouter = require('./routes/Peixaria');
 var app = express();
+
+mongoose.connect('mongodb+srv://sophiamello05:Euamosushi2024@sophia.sfgfycr.mongodb.net/supermercado?retryWrites=true&w=majority');
+
 app.use(express.static('public'))
 app.use('/static', express.static('public'))
 
@@ -71,7 +75,7 @@ app.use('/Assai', AssaiRouter);
 app.use('/Lagoa', LagoaRouter);
 app.use('/Aves',AvesRouter);
 app.use('/Leite',LeiteRouter);
-app.use('./search',searchRouter);
+app.use('/Peixaria',PeixeRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
